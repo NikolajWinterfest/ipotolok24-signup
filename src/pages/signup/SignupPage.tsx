@@ -10,7 +10,7 @@ const SignupPage = () => {
           <div className="welcome__header">
             <img
               className="welcome__logo"
-              src="/ipotolok24/public/logo.svg"
+              src="../ipotolok24/public/logo.svg"
               alt="logo"
             />
             <h3 className="welcome__title">Присоединиться</h3>
