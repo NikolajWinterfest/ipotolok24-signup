@@ -1,6 +1,7 @@
 import Link from 'antd/es/typography/Link'
 import { SignupForm } from './ui'
 import { documentsLinks } from '../../constants/links'
+import logo from '../../assets/logo.svg'
 
 const SignupPage = () => {
   return (
@@ -8,11 +9,7 @@ const SignupPage = () => {
       <div className="welcome__content container">
         <div className="welcome__fieldsblock">
           <div className="welcome__header">
-            <img
-              className="welcome__logo"
-              src="../ipotolok24/public/logo.svg"
-              alt="logo"
-            />
+            <img className="welcome__logo" src={logo} alt="logo" />
             <h3 className="welcome__title">Присоединиться</h3>
           </div>
           <SignupForm />
