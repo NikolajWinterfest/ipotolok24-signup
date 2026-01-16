@@ -10,7 +10,7 @@ const SignupPage = () => {
           <div className="welcome__header">
             <img
               className="welcome__logo"
-              src="src/assets/logo.svg"
+              src="/logo.svg"
               alt="logo"
             />
             <h3 className="welcome__title">Присоединиться</h3>

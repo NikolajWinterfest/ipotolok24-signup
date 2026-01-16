@@ -36,7 +36,7 @@
 .welcome__background {
   width: 50%;
   border-radius: 16px;
-  background-image: url(./assets/image_background.jpg);
+  background-image: url(/image_background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
