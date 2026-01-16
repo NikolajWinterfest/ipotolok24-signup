@@ -1,0 +1,199 @@
+#root {
+  margin: 0 auto;
+  max-width: 1920px;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+/* ------------------------- HEAD SELECTOR ------------------------- */
+.welcome {
+  width: 100%;
+  padding: 16px;
+}
+
+/* ------------------------- Logo ------------------------- */
+.welcome__logo {
+  padding-bottom: 25px;
+  max-width: 250px;
+}
+
+/* --------------- Content --------------- */
+.welcome__content {
+  display: flex;
+  gap: 25px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.welcome__fieldsblock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+.welcome__background {
+  width: 50%;
+  border-radius: 16px;
+  background-image: url(./assets/image_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------- Title ------------------------- */
+.welcome__title {
+  font-weight: 600;
+  position: relative;
+  background: #fff;
+}
+
+.welcome__title::after,
+.welcome__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  background: #ccd9e5;
+  z-index: 1;
+}
+
+.welcome__title::after {
+  right: 0;
+  left: 75%;
+}
+
+.welcome__title::before {
+  left: 0;
+  right: 75%;
+}
+
+/* ------------------------- Form ------------------------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form__label {
+  max-width: 600px;
+  width: 100%;
+}
+
+.form__inputfield {
+  margin-top: 3px;
+  width: 100%;
+}
+
+.form__error {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: red;
+}
+
+/* ------------------------- Company Fields ------------------------- */
+.company-info {
+  margin-bottom: 5px;
+}
+
+/* ------------------------- Button ------------------------- */
+.form__button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 3px 16px;
+  font-family: inherit;
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ccd9e5;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+@media (any-hover:hover) {
+  .button:hover {
+    color: #008cea;
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s, background-color 0.3s;
+  }
+}
+
+.welcome .welcome__button {
+  margin-top: 6px;
+  width: 100%;
+}
+
+.button--big {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.button--blue {
+  color: #fff;
+  border-color: #008cea;
+  background-color: #008cea;
+}
+
+/* ------------------------- CHECKBOX'S and link's (policy, license, agreement)  ------------------------- */
+.label-checkbox {
+  margin-bottom: 0;
+}
+
+.form__checkbox-link {
+  text-decoration: underline;
+}
+
+.form__checkbox .form__checkbox-text {
+  font-size: 12px;
+}
+
+/* ------------------------- Various link's (policy, license, agreement) ------------------------- */
+.welcome__documents {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome__question {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #8ea2b5;
+}
+
+.welcome__signup-link {
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+.welcome-link {
+  font-size: 10px;
+  color: #8ea2b5;
+  transition: color 0.3s;
+}
+
+@media (any-hover:hover) {
+  .welcome-link:hover {
+    color: #008cea;
+    transition: color 0.3s;
+  }
+}
+
+/* ------------------------- BREAKPOINT ------------------------- */
+@media (max-width: 1024px) {
+  .welcome__background {
+    display: none;
+  }
+}
