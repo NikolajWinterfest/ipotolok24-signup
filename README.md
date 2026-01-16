@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+## О проекте
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div>
+  <img src="/ipotolok24/ipotolok24-signup.png" title="Полоток 24" alt="Полоток 24" />&nbsp;
+</div>
 
-Currently, two official plugins are available:
+### Цель проекта:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Реализовать форму регистрации юридического лица с валидацией и интеграцией с Dadata.ru API.
 
-## React Compiler
+### Задачи проекта:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+#### Frontend:
 
-## Expanding the ESLint configuration
+Создать страницу регистрации юридического лица с полями:
+– Имя контактного лица
+– Email
+– Пароль
+– Телефон
+– ИНН
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Интеграция с Dadata.ru:
+– Автозаполнение данных компании при вводе ИНН
+– Показ индикатора загрузки во время запроса
+– Обработка ошибок (неверный ИНН, проблемы с сетью)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Валидация:
+– Проверка всех полей на стороне клиента
+– Понятные сообщения об ошибках
+– еактивация кнопки отправки при наличии ошибок
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Отправка формы:
+– Логирование данных в консоли при успешной валидации
+– Показ уведомления об успешной отправке
+– Обработка ошибок при отправке
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+UX/UI:
+– Дебаунс запросов к Dadata
+– Адаптивная верстка
+– Чистый и читаемый интерфейс
+
+## Технологии
+
+<div>
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/React.svg" title="react" alt="react" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/Vite.svg" title="vite" alt="vite" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/TypeScript.svg" title="typescript" alt="typescript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/HTML.svg" title="html5" alt="html5" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/CSS.svg" title="css3" alt="css3" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/NikolajWinterfest/NikolajWinterfest/blob/master/assets/icons/Git.svg" title="git" alt="git" width="40" height="40"/>&nbsp;
+</div>
+
+## Запуск проекта
+
+### Склонировать проект на ваш компьютер с Github с помощью команды:
+
+```
+gh repo clone NikolajWinterfest/ipotolok24-signup
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Установить зависимости с помощью команды
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+npm install
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Запустить проект с помощью команды
+
+```
+npm run dev
+```
+
+### Собрать проект с помощью команды
+
+```
+npm run build
 ```
