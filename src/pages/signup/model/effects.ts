@@ -1,9 +1,9 @@
 // -------------------------------------------- EFFECTS -------------------------------------------- //
+import { API_KEY } from '../../../config/API_KEY'
 import type { SignupForm } from './types'
 import { createEffect } from 'effector'
 
 // -------------------------------------------- DADATA -------------------------------------------- //
-// API KEY
 
 export const fetchCompanyByInnFx = createEffect<string, Partial<SignupForm>>(
   async (inn) => {
@@ -17,7 +17,7 @@ export const fetchCompanyByInnFx = createEffect<string, Partial<SignupForm>>(
           Authorization: `Token ${API_KEY}`,
         },
         body: JSON.stringify({ query: inn }),
-      }
+      },
     )
 
     if (!response.ok) {
@@ -40,7 +40,7 @@ export const fetchCompanyByInnFx = createEffect<string, Partial<SignupForm>>(
       okved: first.okved,
       account: first.accounts?.[0]?.value || 'Данные отсутствуют',
     }
-  }
+  },
 )
 
 // -------------------------------------------- SUBMIT FORM -------------------------------------------- //
